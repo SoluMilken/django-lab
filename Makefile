@@ -6,7 +6,7 @@ install:
 
 .PHONY: lint
 lint:
-	flake8
+	flake8 .
 
 .PHONY: test
 test:
