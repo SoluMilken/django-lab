@@ -9,8 +9,6 @@ Django = "*"
 [dev-packages]
 flake8 = "*"
 ipdb = "*"
-pytest = "*"
-pytest-cov = "*"
 
 [requires]
 python_version = "3.6"
