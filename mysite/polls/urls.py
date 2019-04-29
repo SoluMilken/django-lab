@@ -6,17 +6,21 @@ from . import views
 app_name = 'polls'  # add namespaces to URLconf
 urlpatterns = [
     # ex: /polls/
-    path('', views.index, name='index'),  # run def index in views.py
+    path(
+        '',
+        views.IndexView.as_view(),
+        name='index',
+    ),  # run def index in views.py
     # ex: /polls/5/
     path(
-        '<int:question_id>/',
-        views.detail,
+        '<int:pk>/',
+        views.DetailView.as_view(),
         name='detail',
     ),  # run def details in views.py
     # ex: /polls/5/results/
     path(
-        '<int:question_id>/results/',
-        views.results,
+        '<int:pk>/results/',
+        views.ResultsView.as_view(),
         name='results',
     ),  # run def results in views.py
     # ex: /polls/5/vote/
