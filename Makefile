@@ -10,7 +10,7 @@ lint:
 
 .PHONY: test
 test:
-	pytest -W ignore
+	python ./mysite/manage.py test polls
 
 .PHONY: all
 all: lint test
